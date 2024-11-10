@@ -18,7 +18,7 @@ export const Input = forwardRef(({ name, label, onChange, error}, ref) => {
 
   return (
     <div className="flex flex-col gap-2">
-      <label className={`uppercase font-semibold text-sm tracking-widest ${labelClass}`}>{label}</label>
+      <label className={`uppercase font-semibold text-sm tracking-widest text-figma-dark-grey ${labelClass}`}>{label}</label>
       <input type="number" name={name} id={`input-${name}`} onChange={onChange} placeholder={placeholder()} ref={ref} className={`w-20 md:w-40 h-10 md:h-16 px-4 py-2 font-bold text-black ${inputBorderClass} rounded-xl outline-none focus:border-figma-purple`}/>
       {error && <p className="italic text-figma-red text-sm">{error.message}</p>}
     </div>
