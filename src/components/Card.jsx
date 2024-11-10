@@ -13,6 +13,7 @@ export const Card = () => {
 
   const renderResults = (results) => {
     const {day, month, year} = results;
+    console.log(day, month, year);
     setResults({
       days: day,
       months: month,
@@ -24,7 +25,7 @@ export const Card = () => {
     <div className="bg-white rounded-tl-lg rounded-bl-lg rounded-tr-lg rounded-br-[25%] flex flex-col w-full max-w-[840px] px-4 py-8 md:px-8 md:py-12">
       <InputGroup callback={renderResults}/>
       <Results>
-        <Result value={results.days} type="years"/>
+        <Result value={20} type="years"/>
         <Result value={results.months} type="months"/>
         <Result value={results.years} type="days"/>
       </Results>
