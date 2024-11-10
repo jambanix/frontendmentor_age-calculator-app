@@ -1,18 +1,32 @@
-import { memo, useEffect, useInsertionEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-
-
-
-const generateNumbers = (target) => Array.from(Array(target).keys());
 
 export const Result = ({ value, type }) => {
 
+  const lastValue = useRef(value);
+  const [displayValue, setDisplayValue] = useState(0);
+
+  useEffect(() => {
+    let timer;
+    if (value !== lastValue.current) {
+      lastValue.current = value
+      setDisplayValue(prev => 0);
+    }
+    if (displayValue !== value) {
+      timer = setTimeout(() => {
+        setDisplayValue(prev => prev + 1);
+      }, 20);
+    }
+
+    return () => clearInterval(timer);
+  }, [value, displayValue])
+
   return (
-    <div className="flex gap-2 text-heading-mobile md:text-heading-desktop italic items-center">
+    <div className="flex gap-4 text-heading-mobile md:text-heading-desktop italic items-center">
       <div className="flex gap-4 text-figma-purple">
         {
           (value || value === 0)
-          ? value
+          ? displayValue
           :
           (
             <>
