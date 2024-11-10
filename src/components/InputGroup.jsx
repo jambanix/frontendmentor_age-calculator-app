@@ -63,8 +63,8 @@ export const InputGroup = ({callback}) => {
   return (
     <form noValidate onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-16">
       <div className="flex gap-6">
-        <Input name="day" label="day" {...register("day", {validate: {dayForMonth: day => validateDay(day) || "Can't be in the future"}, required: {value: true, message: "This field is required"}})} error={errors?.day}/>
-        <Input name="month" label="month" {...register("month",{max: {value: 12, message: "Must be a valid month"}, validate: {future: month => validateMonth(month) || "Can't be in the future"}, required: {value: true, message: "This field is required"}})} error={errors?.month}/>
+        <Input name="day" label="day" {...register("day", {validate: {dayForMonth: day => validateDay(day) || "Can't be in the future"}, required: {value: true, message: "This field is required"}, max:{value: 31, message: "Must be a valid day"}})} error={errors?.day}/>
+        <Input name="month" label="month" {...register("month",{max: {value: 12, message: "Must be a valid month"}, validate: {future: month => validateMonth(month) || "Can't be in the future"}, required: {value: true, message: "This field is required"}, })} error={errors?.month}/>
         <Input name="year" label="year" {...register("year", {max: {value: yearToday, message: "Must be in the past"}, required: {value: true, message: "This field is required"}})} error={errors?.year}/>
       </div>
       <div className="flex relative">
