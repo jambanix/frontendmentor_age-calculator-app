@@ -22,7 +22,7 @@ export const Card = () => {
   }
 
   return (
-    <div className="bg-white rounded-2xl rounded-br-[25%] flex flex-col w-full max-w-[840px] px-4 py-8 md:px-8 md:py-12">
+    <div className="bg-white rounded-2xl rounded-br-[25%] h-fit flex flex-col w-full max-w-[460px] md:max-w-[840px] px-4 py-8 md:px-12 md:py-12">
       <InputGroup callback={renderResults}/>
       <Results>
         <Result value={results.years} type="years"/>

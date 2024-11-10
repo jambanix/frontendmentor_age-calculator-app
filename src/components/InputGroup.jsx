@@ -70,7 +70,7 @@ export const InputGroup = ({callback}) => {
       <div className="flex relative">
         <hr className="bg-figma-dark-grey w-full"/>
         <button type="submit">
-          <img src={iconArrow} alt="arrow icon" className="p-6 bg-figma-purple rounded-full flex items-center justify-center absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 h-20 w-20 md:right-0 md:translate-x-0"/>
+          <img src={iconArrow} alt="arrow icon" className="p-4 md:p-6 bg-figma-purple rounded-full flex items-center justify-center absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 h-16 w-16 md:h-20 md:w-20 md:right-0 md:translate-x-0"/>
         </button>
       </div>
     </form>

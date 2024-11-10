@@ -12,5 +12,8 @@
     appearance: textfield;
     -moz-appearance: textfield;
   }
+}
 
+body {
+  font-family: "Poppins", sans-serif;
 }

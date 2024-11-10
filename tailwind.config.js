@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontSize: {
-        "heading-mobile": "56px",
+        "heading-mobile": "36px",
+        "heading-tablet": "56px",
         "heading-desktop": "104px"
       },
       colors: {

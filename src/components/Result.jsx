@@ -25,8 +25,8 @@ export const Result = ({ value, type }) => {
   }, [value, displayValue])
 
   return (
-    <div className="flex gap-4 text-heading-mobile md:text-heading-desktop italic items-center">
-      <div className="flex gap-4 text-figma-purple">
+    <div className="flex gap-4 text-heading-mobile md:text-heading-tablet lg:text-heading-desktop italic items-center">
+      <div className="flex gap-4 text-figma-purple font-bold">
         {
           (value || value === 0)
           ? displayValue
@@ -39,7 +39,7 @@ export const Result = ({ value, type }) => {
           )
         }
       </div>
-      <h2 className="font-extrabold">{displayTitle}</h2>
+      <h2 className="font-bold">{displayTitle}</h2>
     </div>
   )
 }
