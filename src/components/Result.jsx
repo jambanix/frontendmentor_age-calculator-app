@@ -6,6 +6,9 @@ export const Result = ({ value, type }) => {
   const lastValue = useRef(value);
   const [displayValue, setDisplayValue] = useState(0);
 
+  // take the s off if it's singular
+  const displayTitle = value === 1 ? type.slice(0, -1) : type
+
   useEffect(() => {
     let timer;
     if (value !== lastValue.current) {
@@ -36,7 +39,7 @@ export const Result = ({ value, type }) => {
           )
         }
       </div>
-      <h2 className="font-extrabold">{type}</h2>
+      <h2 className="font-extrabold">{displayTitle}</h2>
     </div>
   )
 }
